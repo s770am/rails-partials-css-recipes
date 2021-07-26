@@ -1,0 +1,23 @@
+
+<%= form_for new_recipe do |f| %>
+
+    <div>
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+    </div>
+
+     <div>
+            <%= f.label :prep_time %>
+            <%= f.number_field :prep_time %>
+    </div>
+
+     <div>
+            <%= f.label :ingredients %>
+            <%= f.text_area :ingredients %>
+    </div>
+    <div>
+        <%= f.submit %>
+    </div>
+<% end %>
+<br>
+<%= link_to "back to main", recipes_path %>

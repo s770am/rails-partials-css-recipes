@@ -1,0 +1,14 @@
+<h1>home</h1>
+
+    <ul>
+    <% @recipes.each do |r| %>
+<li><%= r.name %> <%= r.prep_time %> 
+<%= link_to "delete", recipe_path(r), method: :delete, data: {confirm: "my sons shall avenge me!!"} %>
+<%= link_to "edit", edit_recipe_path(r) %>
+<br><%= r.ingredients %>
+</li>
+
+
+<% end %>
+    </ul>
+<%= link_to "add a new recipe",  new_recipe_path %>
